@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	alert ("День добрый! Наша программа предлагает Вам подсчитать простой и сложный банковские проценты сроком на 5 лет.");
+	do {
+		var money = +prompt ("Введите, пожалуйста, желаемую сумму:");
+		var perc = +prompt ("Введите ежемесячный процент:");
+	} while (isNaN(money) || isNaN(perc));
+		
+	//простой процент
+	document.write ("Мы имеем сумму: "+money+".<br>Под "+perc+" % на 5 лет.<br> Ниже приведены подсчёты при использовании простого банковского процента." + "<br>" + "<br>");
+	var i = 1;
+	while (i<=5){
+		var result2 = money+money/100*perc*i;
+		document.write ("Вы получите за " + i + " год: " + result2.toFixed(2) + "<br>");
+		i++;
+	}
+	//сложный процент
+	document.write ("<br>Далее следуют подсчёты при использовании сложного банковского процента." + "<br>" + "<br>");
+	var i = 1;
+		while (i<=5){
+		var a = (1+perc*30.42/36500);
+		const b = Math.pow(a, 12); //эта строка возводит в степень
+		var result1 = money*b;
+		document.write ("Вы получите за " + i + " год: " + result1.toFixed(2) + "<br>");
+		i++;
+		money = result1;
+	}
+	document.write ("<br>Благодарим Вас за то, что воспользовались услугами нашей программы, и желаем хорошего дня!" + "<br>" + "<br>");
+
+</script>
+
+

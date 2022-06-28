@@ -1,0 +1,91 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(24, 24, 124);
+}
+
+.box {
+    border: 2px solid rgb(24, 24, 124);
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 700px;
+}
+
+#basketTotal {
+    border: 2px solid rgb(24, 24, 124);
+    width: 150px;
+    height: 25px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productLine {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.product_name,
+.product_quantity,
+.product_price {
+    width: 200px;
+}
+
+.product_quantity {
+    text-align: center;
+}
+
+.product_price {
+    text-align: center;
+}
+
+.button {
+    width: 60px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+
+.buttonText {
+    margin: 0;
+}
+
+.basketBox {
+    width: 1em;
+    margin-right: 10px;
+}
+
+.header {
+    color: rgb(24, 24, 124);
+    display: flex;
+    justify-content: space-between;
+}
+.imgLittle {
+    width: 50px;
+    height: 50px;
+}
+.galBox {
+    position: relative;
+}
+#next {
+    position: absolute;
+    top: 250px;
+    right: 10px;
+}
+#prev {
+    position: absolute;
+    top: 250px;
+}
+h3 {
+    width: 120px;
+    text-align: center;
+}

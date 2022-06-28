@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var user1 = prompt ("Здравствуй, первый игрок, как я могу к тебе обращаться?");
+	var user2 = prompt ("Здравствуй, второй игрок, как я могу к тебе обращаться?");
+	var stopWord = "флюгегехаймен";
+	var answer = parseInt (Math.random() * 100);
+	var userAnswer1 = +prompt("Приятно познакомиться, "+user1 +", угадай число от 0 до 100.");
+	var userAnswer2 = +prompt("Приятно познакомиться, "+user2 +", а теперь ты угадай число от 0 до 100.");
+	alert ("Если кто-нибудь из вас захочет прекратить игру, достаточно всего лишь в поле ответа написать "+stopWord+". Поехали!");
+	
+	do {
+		if (userAnswer1 == answer && userAnswer2 == answer){
+			alert ("Опа, у нас ничья! Поздравляю!");
+			break;	
+		} else if (userAnswer1 == answer){
+			alert ("Поздравляю, "+user1+", победа за тобой! "+user2+", не расстраивайся, повезёт в следующий раз!");
+			break;
+		} else if (userAnswer2 == answer){
+			alert ("Поздравляю, "+user2+", победа за тобой! "+user1+", не расстраивайся, повезёт в следующий раз!");
+			break;
+		} else if (userAnswer1 > answer && userAnswer2 > answer ){
+			alert (user1 +" и " +user2 +", вы ввели слишком большое число.");
+		} else if (userAnswer1 < answer && userAnswer2 < answer ){
+			alert (user1 +" и " +user2 +", вы ввели слишком маленькое число.");
+		} else if (userAnswer1 < answer && userAnswer2 > answer) {
+			alert (user1+ ", твоё число слишком маленькое, "+user2+ ", твоё число слишком большое.");
+		} else if (userAnswer1 > answer && userAnswer2 < answer) {
+			alert (user1+ ", твоё число слишком большое, "+user2+ ", твоё число слишком маленькое.");
+		}
+		userAnswer1 = prompt("Никто не угадал, продолжаем. "+user1 + ", введи число от 0 до 100");
+		userAnswer2 = prompt(user2 + ", введи своё число от 0 до 100");
+			 if (userAnswer1 == stopWord){
+				alert ("Ой, " +user1+ ", больше не хочет с нами играть. Что же, на этом и закончим. Правильный ответ был: "+answer+". Всего хорошего!");
+				break;
+			} else if (userAnswer2 == stopWord){
+				alert ("Ой, " +user2+ ", больше не хочет с нами играть. Что же, на этом и закончим. Правильный ответ был: "+answer+". Всего хорошего!");
+				break;
+			}
+		userAnswer1 = parseInt(userAnswer1);
+		userAnswer2 = parseInt(userAnswer2);
+	}
+	while (true);
+
+</script>

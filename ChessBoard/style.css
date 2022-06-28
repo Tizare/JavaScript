@@ -1,0 +1,73 @@
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    min-width: 33.2em;
+    min-height: 33.2em;
+}
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33em;
+    height: 33em;
+    border: 1px solid rgb(109, 56, 13);
+}
+.cell {
+    width: 3.3em;
+    height: 3.3em;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.blackCell {
+    background-color: rgb(109, 56, 13);
+}
+.whiteCell {
+    background-color: burlywood;
+}
+.edge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgb(109, 56, 13);
+}
+
+.blackPawns {
+    background-image: url(img/pawn.png);
+}
+.whitePawns {
+    background-image: url(img/pawn2.png);
+}
+.blackRook {
+    background-image: url(img/rook.png);
+}
+.whiteRook {
+    background-image: url(img/rook2.png);
+}
+.blackKnight {
+    background-image: url(img/knight.png);
+}
+.whiteKnight {
+    background-image: url(img/knight2.png);
+}
+.blackBishop {
+    background-image: url(img/bishop.png);
+    background-size: 41%;
+}
+.whiteBishop {
+    background-image: url(img/bishop2.png);
+    background-size: 41%;
+}
+.blackKing {
+    background-image: url(img/king.png);
+}
+.whiteKing {
+    background-image: url(img/king2.png);
+}
+.blackQueen {
+    background-image: url(img/queen.png);
+}
+.whiteQueen {
+    background-image: url(img/queen2.png);
+}

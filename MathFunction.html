@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My homework</title>
+</head>
+<body>
+    <h3>Задание 1.</h3>
+    <p>
+        <b>var a = 1, b = 1, c, d;</b> <br>
+        <b>c = ++a; alert(c);           // 2</b> - данное значение имеем потому, что мы A сначала увеличиваем на 1 единицу, а потом выводим. А равно и отображено 2. <br>
+        <b>d = b++; alert(d);           // 1</b> - данное значение имеем потому, что мы B сначала выводим, потом увеличиваем на 1 единицу. B отображено 1, но равно в последствии 2. <br>
+        <b>c = (2+ ++a); alert(c);      // 5</b> - здесь мы к 2 прибавляем A, увеличенное ещё на 1 единицу и равняющуюся уже 3, в результате получаем 5. <br>
+        <b>d = (2+ b++); alert(d);      // 4</b> - здесь мы к 2 прибавляем B (которое записано как 2 из предыдущих операций) и получаем, соответственно, 4, а затем B увеличивается ещё на 1 единицу и имеет последующее значение 3, как и A, что мы и видим в примерах снизу. <br>
+        <b>alert(a);                    // 3</b> <br>
+        <b>alert(b);                    // 3</b>
+    </p>
+
+    <h3>Задание 2.</h3>
+    <p>
+        <b>var a = 2; <br>
+        var x = 1 + (a *= 2);</b> <br>
+        В данном примере Х будет равен 5, так как мы к 1 прибавляем А, равное 2 и умноженное на 2. 1+4=5.
+    </p>
+    <h3>Задание 3.</h3>
+
+    <script>
+       do {
+            var a = parseInt(prompt("Для задания №3 введите, пожалуйста, целое число, которое задаст значение а:"));
+            var b = parseInt(prompt("Теперь введите, пожалуйста, целое число, которое задаст значение b:")); 
+       } while (isNaN(a) || isNaN(b));
+       if (a>=0 && b>=0){
+           var different1 = a-b;
+           var different2 = b-a;
+           document.write ("Число а = "+a+"; <br> Число b = "+b+"; <br> a - b = "+different1+";<br>b - a = "+different2+";");
+       } else if (a<0 && b<0){
+           var multi = a*b;
+           document.write ("Число а = "+a+"; <br> Число b = "+b+"; <br> a * b = "+multi+";");
+       } else if ((a>=0 && b<0)||(a<0 && b>=0)) {
+           var sum = a + b;
+           document.write ("Число а = "+a+"; <br> Число b = "+b+"; <br> a + b = "+sum+";");
+        } 
+    </script>
+    <h3>Задание 4.</h4>
+
+        <script>
+            do {
+                var yourNumber = parseInt(prompt("Для задания №4 выберите с каго числа будем считать до 15. (Вам доступны числа с 0 до 15)"));
+            } while (isNaN(yourNumber) || yourNumber<0 || yourNumber>15);
+            document.write("Вы захотели считать с "+yourNumber+" до 15.<br> Поехали: ")
+            switch(yourNumber){
+                case 0:
+                    document.write("0; ")
+                case 1:
+                    document.write("1; ")
+                case 2:
+                    document.write("2; ")
+                case 3:
+                    document.write("3; ")
+                case 4:
+                    document.write("4; ")
+                case 5:
+                    document.write("5; ")
+                case 6:
+                    document.write("6; ")
+                case 7:
+                    document.write("7; ")
+                case 8:
+                    document.write("8; ")
+                case 9:
+                    document.write("9; ")
+                case 10:
+                    document.write("10; ")
+                case 11:
+                    document.write("11; ")
+                case 12:
+                    document.write("12; ")
+                case 13:
+                    document.write("13; ")
+                case 14:
+                    document.write("14; ")
+                case 15:
+                    document.write("15.")
+            }
+        </script>
+    <h3>Задание 5.</h3>
+    <p>Вот пример функции на сложение: <br> 
+        <b>function functSum (arg1, arg2){<br>
+            var result = arg1+arg2;<br>
+            return result;<br>
+        }</b><br>
+        Оставшиеся четыре функции точно такие же. Отличаются только название и арифметический знак.
+    </p>
+   
+    <script>
+        function functSum (arg1, arg2){
+            var result = arg1+arg2;
+            return result;
+        }
+        function functSubtraction (arg1, arg2){
+            var result = arg1-arg2;
+            return result;
+        }
+        function functMultiplication (arg1, arg2){
+            var result = arg1*arg2;
+            return result;
+        }
+        function functDivision (arg1, arg2){
+            var result = arg1/arg2;
+            return result;
+        }
+    </script>
+    <h3>Задание 6.</h3>
+    <script>
+        function MathOperation (arg1, arg2, operation){
+            switch (operation){
+                case "+":
+                    var result = functSum(arg1,arg2)
+                    break
+                case "-":
+                    var result = functSubtraction(arg1,arg2)
+                    break
+                case "*":
+                    var result = functMultiplication(arg1,arg2)
+                    break
+                case "/":
+                    var result = functDivision(arg1,arg2)
+                    break
+            } 
+            return result;
+        }
+
+        do {
+            var number1 = +prompt("Для задания 6 введите первое число:");
+            var number2 = +prompt("Второе число:");
+        } while (isNaN(number1) || isNaN (number2));
+            var yourOperation = prompt("Введите один из следующих арифметических знаков: + - * /");
+        var answer =  MathOperation(number1, number2, yourOperation);
+        document.write ("Мы получили следующий пример и результат: "+number1+" "+yourOperation+" "+number2+" = "+answer);
+    </script>
+    <p>Подробнее с функцией можно ознакомиться в исходниках.</p>
+    <h3>Задание 7.</h3>
+    <p>Null и 0 сравнила. Результаты неоднозначны! Null не равен 0, он не больше и не мешьне 0, но в тоже самое время он больше или равен 0 и он меньше или равен 0. Честно говоря, я не знаю, почему так, но я нашла этому следующее объяснение: <br>
+    "Выражение "Null >=0" выдаёт значение true потому, что пляшет от противного, так как "null меньше 0" выражение ложное, значит null больше или равен нулю." Логично, конечно. </p>
+    <h3>Задание 8.</h3>
+    <script>
+        function power(val, pow){
+            var result;
+            if (pow==0)
+                result = 1;
+            else if (pow==1)
+                result = val;
+            else if (pow >=2)
+                result = power (val, pow-1)*val;
+            else if (pow==-1)
+                result = 1/val;
+            else if (pow<=-2) {
+                pow = -pow; 
+                result = 1 / (power (val, pow-1)*val);}
+            return result;
+        }
+        do{
+            var number3 = +prompt("Для задания 8 введите число, которое хотите возвести в степень:");
+            var number4 = +prompt("Теперь введите желаемую степень:");
+        } while (isNaN(number3)||isNaN(4));
+        var answer2 = power(number3, number4);
+        document.write ("Мы решили число "+number3+" возвести в "+number4+" степень и получили следующий результат: "+answer2+"<br>Мы очень надеемся, что он верный :)");
+    </script>
+
+</body>
+</html>
